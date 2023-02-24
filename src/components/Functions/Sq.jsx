@@ -1,10 +1,11 @@
 import DelBtn from "../Buttons/DelBtn";
 import CloneBtn from "../Buttons/CloneBtn";
+import SpinBtn from "../Buttons/SpinBtn";
 
 function Sq(props) {
   return (
     <div
-      className="sq"
+      className={"sq " + (props.s.spin ? "spin" : " ")}
       style={{
         display: "flex",
         justifyContent: "center",
@@ -22,6 +23,12 @@ function Sq(props) {
         setSq={props.setSq}
         sq={props.s}
       ></CloneBtn>
+      <SpinBtn
+        className="sml-btn-green"
+        sq={props.s}
+        setSq={props.setSq}
+        id={props.id}
+      ></SpinBtn>
     </div>
   );
 }

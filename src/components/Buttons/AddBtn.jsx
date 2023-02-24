@@ -3,7 +3,14 @@ import RandomColor from "../Functions/RandomColor";
 
 function AddBtn(props) {
   const addBtnHandler = () => {
-    props.setSq((prev) => [...prev, { id: uuidv4(), color: RandomColor() }]);
+    props.setSq((prev) => [
+      ...prev,
+      {
+        id: uuidv4(),
+        color: RandomColor(),
+        spin: false,
+      },
+    ]);
   };
   return <button onClick={addBtnHandler}>Add one</button>;
 }
