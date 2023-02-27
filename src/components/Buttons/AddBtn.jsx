@@ -11,6 +11,8 @@ function AddBtn(props) {
         color: RandomColor(),
         spin: false,
         number: (" " + RandomNum(0, 999)).padStart(3, "0"),
+        row: prev.length,
+        show: true,
       },
     ]);
   };

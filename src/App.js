@@ -9,6 +9,7 @@ import StopSpinBtn from "./components/Buttons/StopSpinBtn";
 import SpinAll from "./components/Buttons/SpinAll";
 import SortBtn from "./components/Buttons/SortBtn";
 import Filter from "./components/Buttons/Filter";
+import DefaultSort from "./components/Buttons/DefaultSort";
 
 function App() {
   const [sq, setSq] = useState([]);
@@ -17,9 +18,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="sq-bin">
-          {sq.map((s, i) => (
-            <Sq key={i} s={s} id={s.id} color={s.color} setSq={setSq}></Sq>
-          ))}
+          {sq.map((s, i) =>
+            s.show ? (
+              <Sq key={i} s={s} id={s.id} color={s.color} setSq={setSq}></Sq>
+            ) : null
+          )}
         </div>
 
         <div className="sq-bin">
@@ -30,6 +33,7 @@ function App() {
           <SpinAll setSq={setSq} classes="green"></SpinAll>
           <SortBtn setSq={setSq} classes="aqua"></SortBtn>
           <Filter setSq={setSq} classes="wineRed"></Filter>
+          <DefaultSort setSq={setSq} classes="coral"></DefaultSort>
         </div>
       </header>
     </div>

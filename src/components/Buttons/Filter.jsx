@@ -1,6 +1,10 @@
 function Filter(props) {
   const filterHandler = () => {
-    props.setSq((a) => a.filter((a) => a.number > 300));
+    props.setSq((a) =>
+      a.map((a) =>
+        a.number > 300 ? { ...a, show: true } : { ...a, show: false }
+      )
+    );
   };
   return (
     <div>
