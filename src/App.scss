@@ -48,14 +48,13 @@
   .sq {
     background-color: gray;
     padding: 20px 40px;
-    height: 80px;
-    width: 120px;
+    gap: 8px;
     border-radius: 15px;
     border: 1px solid black;
     font-size: 24px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 1px;
     align-items: center;
   }
 }
@@ -65,7 +64,7 @@ button {
   padding: 20px 30px;
   background-color: rgb(43, 126, 126);
   height: 90px;
-  width: 120px;
+  width: 150px;
   border-radius: 15px;
   border: 1px solid black;
   font-size: 16px;

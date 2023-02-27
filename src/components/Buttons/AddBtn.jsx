@@ -1,5 +1,6 @@
 import { v4 as uuidv4, v4 } from "uuid";
 import RandomColor from "../Functions/RandomColor";
+import RandomNum from "../Functions/RandomNum";
 
 function AddBtn(props) {
   const addBtnHandler = () => {
@@ -9,6 +10,7 @@ function AddBtn(props) {
         id: uuidv4(),
         color: RandomColor(),
         spin: false,
+        number: (" " + RandomNum(0, 999)).padStart(3, "0"),
       },
     ]);
   };
